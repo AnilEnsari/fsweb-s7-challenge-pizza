@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header1 = () => {
   return (
@@ -6,13 +7,13 @@ const Header1 = () => {
       <div className="headerContainer">
         <h1>Teknolojik Yemekler </h1>
         <nav>
-          <a className="renka" href="/">
+          <Link className="renka" to="/">
             Ana Sayfa-
-          </a>
-          <a className="renka" href="/">
+          </Link>
+          <Link className="renka" to="/">
             Seçenekler-
-          </a>
-          <a href="order"> Sipariş Oluştur</a>
+          </Link>
+          <Link to="/order"> Sipariş Oluştur</Link>
         </nav>
       </div>
     </header>
