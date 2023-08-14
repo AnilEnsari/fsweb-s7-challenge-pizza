@@ -2,14 +2,17 @@ import React from "react";
 
 const Siparisnotu = () => {
   return (
-    <div>
+    <div className="siparisNotu">
       <form>
         <div>
-          <label htmlFor="siparisnotu">Sipariş Notu</label>
+          <label htmlFor="siparisnotu">
+            <h3>Sipariş Notu</h3>
+          </label>
         </div>
         <input
-          type="Note"
-          placeholder="Siparişine eklemek istediğin bir not var mı?"
+          className="notForm"
+          type="text"
+          placeholder="    Siparişine eklemek istediğin bir not var mı?"
         ></input>
       </form>
     </div>

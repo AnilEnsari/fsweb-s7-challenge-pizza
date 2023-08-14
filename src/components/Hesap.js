@@ -20,21 +20,32 @@ const Hesap = (props) => {
 
   return (
     <div className="pieceandresult">
-      <div>
-        <button className="arttırbuton" onClick={azalt}>
+      <div className="artieksi ">
+        <button className="arttirbuton" onClick={azalt}>
           -
         </button>
-        {piece}
-        <button className="arttırbuton" onClick={arttir}>
+        <span className="buttonPiece"> {piece}</span>
+        <button className="arttirbuton" onClick={arttir}>
           +
         </button>
       </div>
-      <div>
-        <h4>Sipariş Toplamı</h4>
-        <div>Seçimler</div>
-        <div>{ekstra}₺</div>
-        <div>Toplam</div>
-        <div>{toplamucret}₺</div>
+      <div className="widthandinline">
+        <div className="orderBill inline">
+          <h4 className="siparisToplam">Sipariş Toplamı</h4>
+          <div className="flexHandlerSecimler">
+            <span>Seçimler</span>
+            <span>{ekstra}₺</span>
+          </div>
+          <div className="flexHandlerToplam">
+            <span>Toplam</span>
+            <span>{toplamucret}₺</span>
+          </div>
+        </div>
+        <div>
+          <a href="success">
+            <button className="orderButton">SİPARİŞ VER</button>
+          </a>
+        </div>
       </div>
     </div>
   );
