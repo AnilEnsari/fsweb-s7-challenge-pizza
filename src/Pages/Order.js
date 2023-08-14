@@ -4,6 +4,7 @@ import EkMalzemeler from "../components/EkMalzemeler";
 import Siparisnotu from "../components/Siparisnotu";
 import Hesap from "../components/Hesap";
 import "./order.css";
+import Header1 from "../layouts/Header1";
 const Order = (props) => {
   const foodList = {
     foodName: "Ege Pizza",
@@ -18,20 +19,7 @@ const Order = (props) => {
   }
   return (
     <div>
-      <header>
-        <div className="headerContainer">
-          <h1>Teknolojik Yemekler </h1>
-          <nav>
-            <a className="renka" href="/">
-              Ana Sayfa-
-            </a>
-            <a className="renka" href="/">
-              Seçenekler-
-            </a>
-            <a href="order"> Sipariş Oluştur</a>
-          </nav>
-        </div>
-      </header>
+      <Header1 />
       <div className="widthcontainer">
         <h3>{foodList.foodName}</h3>
         <div className="pricecontainer">
