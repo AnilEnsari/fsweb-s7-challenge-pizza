@@ -5,7 +5,7 @@ const EkMalzemeler = (props) => {
   const { ekstraHesapla } = props;
   const [exPiece, setExPiece] = useState(0);
   const exHandle = (event) => {
-    if (event.target.checked == true) {
+    if (event.target.checked === true) {
       setExPiece(exPiece + 1);
     } else {
       setExPiece(exPiece - 1);

@@ -11,13 +11,12 @@ const Hesap = (props) => {
   const azalt = () => {
     if (piece > 1) setPiece(piece - 1);
   };
-  const [secimucreti, setSecimucreti] = useState(1);
   const [toplamucret, setToplamucret] = useState(
     foodList ? foodList.foodPrice : 0
   );
   useEffect(() => {
     setToplamucret(ekstra + foodList.foodPrice * piece);
-  }, [secimucreti, piece, ekstra]);
+  }, [piece, ekstra]);
 
   return (
     <div className="pieceandresult">
