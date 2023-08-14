@@ -1,0 +1,22 @@
+header {
+  background-color: #ce2829;
+  color: #faf7f2;
+  display: flex;
+  justify-content: center;
+}
+header a {
+  text-decoration: none;
+  color: #faf7f2;
+}
+.headerContainer {
+  width: 50%;
+}
+header h1 {
+  text-align: center;
+}
+.renka {
+  color: #faf7f2b5;
+}
+.pricecontainer {
+  display: flex;
+}

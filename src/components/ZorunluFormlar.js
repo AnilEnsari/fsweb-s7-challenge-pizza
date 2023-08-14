@@ -15,7 +15,7 @@ const ZorunluFormlar = () => {
         </div>
         <div>
           Hamur Seç
-          <label for="hamursec">
+          <label htmlFor="hamursec">
             <select name="kalinliklar" id="kalinliklar">
               <option value="">Hamur Kalınlığı</option>
               <option value="ince">İnce</option>

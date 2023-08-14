@@ -3,6 +3,7 @@ import ZorunluFormlar from "../components/ZorunluFormlar";
 import EkMalzemeler from "../components/EkMalzemeler";
 import Siparisnotu from "../components/Siparisnotu";
 import Hesap from "../components/Hesap";
+import "./order.css";
 const Order = (props) => {
   const foodList = {
     foodName: "Ege Pizza",
@@ -18,32 +19,39 @@ const Order = (props) => {
   return (
     <div>
       <header>
-        <h1>Teknolojik Yemekler </h1>
-        <nav>
-          <a href="/"> Ana Sayfa</a>
-          <a href="/"> Seçenekler</a>
-          <a href="order"> Sipariş Oluştur</a>
-        </nav>
-      </header>
-
-      <h3>{foodList.foodName}</h3>
-      <div class="pricecontainer">
-        {foodList.foodPrice}₺
-        <div class="review container">
-          <div class="point">4,9</div>
-          <div class="review">200</div>
+        <div className="headerContainer">
+          <h1>Teknolojik Yemekler </h1>
+          <nav>
+            <a className="renka" href="/">
+              Ana Sayfa-
+            </a>
+            <a className="renka" href="/">
+              Seçenekler-
+            </a>
+            <a href="order"> Sipariş Oluştur</a>
+          </nav>
         </div>
-        <p>{foodList.description}</p>
-      </div>
-      <EkMalzemeler ekstraHesapla={ekstraHesapla} />
-      <ZorunluFormlar />
-      <Siparisnotu />
-      <hr></hr>
-      <Hesap foodList={foodList} ekstra={ekstra} />
+      </header>
+      <div className="widthcontainer">
+        <h3>{foodList.foodName}</h3>
+        <div className="pricecontainer">
+          {foodList.foodPrice}₺
+          <div className="review container">
+            <div className="point">4,9</div>
+            <div className="review">200</div>
+          </div>
+          <p>{foodList.description}</p>
+        </div>
+        <EkMalzemeler ekstraHesapla={ekstraHesapla} />
+        <ZorunluFormlar />
+        <Siparisnotu />
+        <hr></hr>
+        <Hesap foodList={foodList} ekstra={ekstra} />
 
-      <a href="success">
-        <button>Onayla</button>
-      </a>
+        <a href="success">
+          <button>Onayla</button>
+        </a>
+      </div>
     </div>
   );
 };
