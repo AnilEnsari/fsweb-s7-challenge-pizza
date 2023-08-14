@@ -49,6 +49,7 @@ header h1 {
 }
 .zorunluFormMain {
   display: inline;
+  width: 100%;
 }
 .ekmlzContainer {
   margin-top: 5rem;
@@ -123,4 +124,8 @@ header h1 {
 .siparisToplam {
   margin: 1rem 1rem 0rem 1rem;
   display: inline-block;
+}
+.flexyap {
+  display: flex;
+  justify-content: space-between;
 }
