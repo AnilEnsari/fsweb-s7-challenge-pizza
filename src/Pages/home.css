@@ -1,3 +1,10 @@
-/* .Logo {
-  background-image: url(Assets/mvp-banner.png);
-} */
+.mainContainer1 {
+  background-image: url("mvp-banner.png");
+  height: 100vh;
+  background-position: bottom;
+  margin-top: 0;
+  padding-top: 0;
+}
+.mainContainer1 h1 {
+  margin: 0;
+}
