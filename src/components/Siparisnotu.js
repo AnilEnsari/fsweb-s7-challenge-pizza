@@ -1,6 +1,10 @@
 import React from "react";
 
-const Siparisnotu = () => {
+const Siparisnotu = ({ setOrderNote }) => {
+  const handleForm = (event) => {
+    setOrderNote(event.target.value);
+  };
+
   return (
     <div className="siparisNotu">
       <form id="special-text">
@@ -10,6 +14,7 @@ const Siparisnotu = () => {
           </label>
         </div>
         <input
+          onChange={handleForm}
           className="notForm"
           type="text"
           placeholder="    Siparişine eklemek istediğin bir not var mı?"

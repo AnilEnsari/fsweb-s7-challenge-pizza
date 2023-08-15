@@ -1,6 +1,10 @@
 import React from "react";
 
-const Name = () => {
+const Name = ({ setMusteriIsmi }) => {
+  const handleIsim = (event) => {
+    setMusteriIsmi(event.target.value);
+  };
+
   return (
     <div className="siparisNotu">
       <form id="name-input">
@@ -13,6 +17,7 @@ const Name = () => {
           className="notForm"
           type="text"
           placeholder="    Size daha doğru hitap edebilmemiz için isminizi bizimle paylaşır mısınız?"
+          onChange={handleIsim}
         ></input>
       </form>
     </div>

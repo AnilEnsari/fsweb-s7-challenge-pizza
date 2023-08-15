@@ -15,7 +15,7 @@ const Hesap = (props) => {
     foodList ? foodList.foodPrice : 0
   );
   useEffect(() => {
-    setToplamucret(ekstra + foodList.foodPrice * piece);
+    setToplamucret((ekstra + foodList.foodPrice) * piece);
   }, [piece, ekstra]);
 
   return (
@@ -34,7 +34,7 @@ const Hesap = (props) => {
           <h4 className="siparisToplam">Sipariş Toplamı</h4>
           <div className="flexHandlerSecimler">
             <span>Seçimler</span>
-            <span>{ekstra}₺</span>
+            <span>{ekstra * piece}₺</span>
           </div>
           <div className="flexHandlerToplam">
             <span>Toplam</span>

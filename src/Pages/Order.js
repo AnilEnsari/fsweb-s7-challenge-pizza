@@ -7,13 +7,34 @@ import Name from "../components/Name";
 import "./order.css";
 import Header1 from "../layouts/Header1";
 const Order = (props) => {
+  const [musteriIsmi, setMusteriIsmi] = useState("");
+  const [orderNote, setOrderNote] = useState("");
+  const [boyut, setBoyut] = useState("");
+  const [hamurKalinlik, setHamurKalinlik] = useState("");
+  const [odenecekMiktar, setOdenecekMiktar] = useState("");
+
   const foodList = {
     foodName: "Ege Pizza",
     foodPrice: 150,
     foodimg: "C:\fsweb-s7-challenge-pizzaAssetsadv-aseets\food-1.png",
     description:
       "Egenin taze toplanmış organik ürünleriyle İtalya'nın dillere destan olmuş bu lezzetini birleştirdik. Hala denemediysen çok şey kaçırıyorsun. Üstenlik developer'ımız sizler için üşenmedi ve öyle bir checklist oluşturduki istediğin ürünleri anında ekleyip çıkarabileceksin ve  tüm bunları yaparken Single Page Application Kullandığı için fiyat hesaplamaları da kuryemiz kadar hızlı olacak ve anında ekranını görebileceksin. Evet bizce de bir  bahşişi hakkediyor.",
+    Siparisnotu: orderNote,
   };
+  const orderObject = {
+    isim: musteriIsmi,
+    size: boyut,
+    adet: "",
+
+    // malzeme1: bool,
+    // malzeme2: bool,
+    Siparisnotu: orderNote,
+    secimUcreti: "",
+    toplamUcret: odenecekMiktar,
+    kalinlik: hamurKalinlik,
+  };
+
+  console.log(orderObject);
   const [ekstra, setEkstra] = useState(0);
   function ekstraHesapla(ekstraAdedi) {
     setEkstra(ekstraAdedi * 5);
@@ -33,10 +54,13 @@ const Order = (props) => {
         </div>
 
         <p>{foodList.description}</p>
-        <ZorunluFormlar />
+        <ZorunluFormlar
+          setBoyut={setBoyut}
+          setHamurKalinlik={setHamurKalinlik}
+        />
         <EkMalzemeler ekstraHesapla={ekstraHesapla} />
-        <Name />
-        <Siparisnotu />
+        <Name setMusteriIsmi={setMusteriIsmi} />
+        <Siparisnotu setOrderNote={setOrderNote} />
         <hr></hr>
         <Hesap foodList={foodList} ekstra={ekstra} />
       </div>
