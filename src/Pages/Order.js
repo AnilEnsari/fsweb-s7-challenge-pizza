@@ -11,7 +11,7 @@ const Order = (props) => {
   const [orderNote, setOrderNote] = useState("");
   const [boyut, setBoyut] = useState("");
   const [hamurKalinlik, setHamurKalinlik] = useState("");
-
+  const [buttonDisabled, setButtonDisabled] = useState(true);
   const [boolean1, setBoolean1] = useState(false);
   const [boolean2, setBoolean2] = useState(false);
   const [boolean3, setBoolean3] = useState(false);
@@ -114,10 +114,18 @@ const Order = (props) => {
           boolean14={boolean14}
           setBoolean14={setBoolean14}
         />
-        <Name setMusteriIsmi={setMusteriIsmi} />
+        <Name
+          setMusteriIsmi={setMusteriIsmi}
+          setButtonDisabled={setButtonDisabled}
+        />
         <Siparisnotu setOrderNote={setOrderNote} />
         <hr></hr>
-        <Hesap foodList={foodList} orderObject={orderObject} ekstra={ekstra} />
+        <Hesap
+          foodList={foodList}
+          orderObject={orderObject}
+          ekstra={ekstra}
+          buttonDisabled={buttonDisabled}
+        />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Hesap = (props) => {
-  const { foodList, ekstra, orderObject } = props;
+  const { foodList, ekstra, orderObject, buttonDisabled } = props;
   const [piece, setPiece] = useState(1);
   const arttir = () => {
     setPiece(piece + 1);
@@ -57,6 +57,7 @@ const Hesap = (props) => {
         <div>
           <Link to="success">
             <button
+              disabled={buttonDisabled}
               onClick={buttonHandler}
               id="order-button"
               className="orderButton"
