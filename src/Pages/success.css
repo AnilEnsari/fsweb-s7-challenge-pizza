@@ -1,0 +1,30 @@
+.mainContainer {
+  background-color: #ce2829;
+  width: 100%;
+  height: 100vh;
+  margin-top: 0;
+}
+.basliklar {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  color: #faf7f2;
+}
+.basliklar h2 {
+  margin-top: 0;
+  padding-top: 3rem;
+}
+.tebriks h1 {
+  font-size: 2.5rem;
+  font-weight: unset;
+  margin: 0;
+  padding: 0;
+  color: #faf7f2;
+}
+.tebriks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  flex-direction: column;
+}
