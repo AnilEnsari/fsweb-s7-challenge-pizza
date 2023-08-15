@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Hesap = (props) => {
   const { foodList, ekstra, orderObject } = props;
@@ -19,7 +21,16 @@ const Hesap = (props) => {
   orderObject.adet = piece;
   orderObject.secimUcreti = ekstra * piece;
   orderObject.toplamUcret = toplamucret;
-
+  const buttonHandler = (e) => {
+    axios
+      .post("https://reqres.in/api/users", orderObject)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) =>
+        console.error("internet Bağlantınızı kontrol edin", error)
+      );
+  };
   return (
     <div className="pieceandresult">
       <div className="artieksi ">
@@ -44,11 +55,15 @@ const Hesap = (props) => {
           </div>
         </div>
         <div>
-          <a href="success">
-            <button id="order-button" className="orderButton">
+          <Link to="success">
+            <button
+              onClick={buttonHandler}
+              id="order-button"
+              className="orderButton"
+            >
               SİPARİŞ VER
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

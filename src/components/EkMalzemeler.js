@@ -22,6 +22,7 @@ const EkMalzemeler = (props) => {
         <div className="ekstramlz">
           <div>
             <input
+              onClick={() => props.setBoolean1(!props.boolean1)}
               onChange={exHandle}
               name="pepperoni"
               id="pepperoni"
@@ -32,6 +33,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean2(!props.boolean2)}
               name="sosis"
               id="sosis"
               type="checkbox"
@@ -42,6 +44,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean3(!props.boolean3)}
               onChange={exHandle}
               name="kanada-jambonu"
               id="kanada-jambonu"
@@ -52,6 +55,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean4(!props.boolean4)}
               onChange={exHandle}
               name="tavuk-izgara"
               id="tavuk-izgara"
@@ -62,6 +66,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean5(!props.boolean5)}
               name="sogan"
               onChange={exHandle}
               id="sogan"
@@ -72,6 +77,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean6(!props.boolean6)}
               onChange={exHandle}
               name="domates"
               id="domates"
@@ -82,6 +88,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean7(!props.boolean7)}
               onChange={exHandle}
               name="misir"
               id="misir"
@@ -92,6 +99,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean8(!props.boolean8)}
               onChange={exHandle}
               name="sucuk"
               id="sucuk"
@@ -102,6 +110,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean9(!props.boolean9)}
               onChange={exHandle}
               name="jalepeno"
               id="jalepeno"
@@ -112,6 +121,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean10(!props.boolean10)}
               onChange={exHandle}
               name="sarimsak"
               id="sarimsak"
@@ -122,6 +132,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean11(!props.boolean11)}
               name="biber"
               onChange={exHandle}
               id="biber"
@@ -132,6 +143,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean12(!props.boolean12)}
               name="salam"
               onChange={exHandle}
               id="salam"
@@ -142,6 +154,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean13(!props.boolean13)}
               onChange={exHandle}
               name="ananas"
               id="ananas"
@@ -152,6 +165,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              onClick={() => props.setBoolean14(!props.boolean14)}
               onChange={exHandle}
               name="kabak"
               id="kabak"

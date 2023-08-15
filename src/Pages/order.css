@@ -129,3 +129,6 @@ header h1 {
   display: flex;
   justify-content: space-between;
 }
+.red {
+  color: #ce2829;
+}

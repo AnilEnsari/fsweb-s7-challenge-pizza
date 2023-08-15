@@ -18,7 +18,9 @@ const ZorunluFormlar = ({ setBoyut, setHamurKalinlik }) => {
       <form id="order-pizza">
         <div className="flexyap">
           <span className="size">
-            <h3 className="inline">Boyut Seç</h3>
+            <h3 className="inline">
+              Boyut Seç <span className="red">*</span>
+            </h3>
             <div>
               <input
                 onChange={handeClick}
@@ -51,7 +53,9 @@ const ZorunluFormlar = ({ setBoyut, setHamurKalinlik }) => {
             </div>
           </span>
           <span className="hamurKalinlik">
-            <h3> Hamur Seç</h3>
+            <h3>
+              Hamur Seç <span className="red">*</span>
+            </h3>
             <label htmlFor="hamursec">
               <select
                 onClick={handleKalinlik}
