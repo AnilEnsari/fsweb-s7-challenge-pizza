@@ -5,10 +5,13 @@ import "./home.css";
 const Home = () => {
   return (
     <div className="mainContainer1">
-      <h1>Teknolojik Yemekler</h1>
-      <Link to="order">
-        <button>Acıktım</button>
-      </Link>
+      <div className="yazilar">
+        <h2>Teknolojik Yemekler</h2>
+        <h1>KOD ACIKTIRIR PIZZA, DOYURUR</h1>
+        <Link to="order">
+          <button className="hungry">Acıktım</button>
+        </Link>
+      </div>
     </div>
   );
 };
