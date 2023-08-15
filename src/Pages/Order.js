@@ -11,7 +11,6 @@ const Order = (props) => {
   const [orderNote, setOrderNote] = useState("");
   const [boyut, setBoyut] = useState("");
   const [hamurKalinlik, setHamurKalinlik] = useState("");
-  const [odenecekMiktar, setOdenecekMiktar] = useState("");
 
   const foodList = {
     foodName: "Ege Pizza",
@@ -26,11 +25,9 @@ const Order = (props) => {
     size: boyut,
     adet: "",
 
-    // malzeme1: bool,
-    // malzeme2: bool,
     Siparisnotu: orderNote,
     secimUcreti: "",
-    toplamUcret: odenecekMiktar,
+    toplamUcret: "",
     kalinlik: hamurKalinlik,
   };
 
@@ -58,11 +55,11 @@ const Order = (props) => {
           setBoyut={setBoyut}
           setHamurKalinlik={setHamurKalinlik}
         />
-        <EkMalzemeler ekstraHesapla={ekstraHesapla} />
+        <EkMalzemeler orderObject={orderObject} ekstraHesapla={ekstraHesapla} />
         <Name setMusteriIsmi={setMusteriIsmi} />
         <Siparisnotu setOrderNote={setOrderNote} />
         <hr></hr>
-        <Hesap foodList={foodList} ekstra={ekstra} />
+        <Hesap foodList={foodList} orderObject={orderObject} ekstra={ekstra} />
       </div>
     </div>
   );

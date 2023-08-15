@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 
 const Hesap = (props) => {
-  const { foodList, ekstra } = props;
+  const { foodList, ekstra, orderObject } = props;
   const [piece, setPiece] = useState(1);
-
   const arttir = () => {
     setPiece(piece + 1);
   };
@@ -17,6 +16,9 @@ const Hesap = (props) => {
   useEffect(() => {
     setToplamucret((ekstra + foodList.foodPrice) * piece);
   }, [piece, ekstra]);
+  orderObject.adet = piece;
+  orderObject.secimUcreti = ekstra * piece;
+  orderObject.toplamUcret = toplamucret;
 
   return (
     <div className="pieceandresult">
