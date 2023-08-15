@@ -13,7 +13,7 @@ const Header1 = () => {
           <Link className="renka" to="/">
             Seçenekler-
           </Link>
-          <Link to="/order"> Sipariş Oluştur</Link>
+          <Link to="/pizza"> Sipariş Oluştur</Link>
         </nav>
       </div>
     </header>

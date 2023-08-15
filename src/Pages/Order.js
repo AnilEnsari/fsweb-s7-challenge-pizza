@@ -3,6 +3,7 @@ import ZorunluFormlar from "../components/ZorunluFormlar";
 import EkMalzemeler from "../components/EkMalzemeler";
 import Siparisnotu from "../components/Siparisnotu";
 import Hesap from "../components/Hesap";
+import Name from "../components/Name";
 import "./order.css";
 import Header1 from "../layouts/Header1";
 const Order = (props) => {
@@ -34,6 +35,7 @@ const Order = (props) => {
         <p>{foodList.description}</p>
         <ZorunluFormlar />
         <EkMalzemeler ekstraHesapla={ekstraHesapla} />
+        <Name />
         <Siparisnotu />
         <hr></hr>
         <Hesap foodList={foodList} ekstra={ekstra} />

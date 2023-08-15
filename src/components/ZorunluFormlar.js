@@ -3,7 +3,7 @@ import React from "react";
 const ZorunluFormlar = () => {
   return (
     <div className="zorunluFormMain ">
-      <form>
+      <form id="order-pizza">
         <div className="flexyap">
           <span className="size">
             <h3 className="inline">Boyut Seç</h3>
@@ -23,7 +23,7 @@ const ZorunluFormlar = () => {
           <span className="hamurKalinlik">
             <h3> Hamur Seç</h3>
             <label htmlFor="hamursec">
-              <select name="kalinliklar" id="kalinliklar">
+              <select name="size-dropdown" id="size-dropdown">
                 <option value="">Hamur Kalınlığı</option>
                 <option value="ince">İnce</option>
                 <option value="kalin">Kalın</option>

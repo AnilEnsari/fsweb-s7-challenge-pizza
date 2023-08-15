@@ -3,7 +3,7 @@ import "./success.css";
 
 const Success = () => {
   return (
-    <div className="mainContainer">
+    <div className="main-container">
       <div className="basliklar">
         <h2>Teknolojik Yemekler</h2>{" "}
       </div>
