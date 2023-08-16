@@ -41,9 +41,31 @@
 }
 .pizzaSelection {
   color: #faf7f2;
-  width: 40%;
+  width: 30%;
   margin: 0 auto;
 }
 .pizzaDetails {
-  font-weight: lighter;
+  font-weight: 200;
+}
+.pizzaTotal {
+  color: #faf7f2;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 2px #faf7f2 solid;
+  border-radius: 4px;
+  width: 30%;
+}
+
+.secimlerFlex {
+  display: flex;
+  justify-content: space-between;
+}
+.marginbottom {
+  margin-bottom: 3rem;
+}
+.marginbottom h1 {
+  font-size: 5rem;
+}
+.bold {
+  font-weight: bold;
 }

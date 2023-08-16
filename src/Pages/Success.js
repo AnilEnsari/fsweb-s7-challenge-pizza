@@ -16,23 +16,36 @@ const Success = ({ exChoosen }) => {
         <div className="tebriks">
           <h4 className="lezzetyolda">lezzetin yolda </h4>
 
-          <h1>SİPARİŞİNİZ ALINDI</h1>
+          <div className="marginbottom">
+            <h1>SİPARİŞ ALINDI</h1>
+          </div>
         </div>
         <hr></hr>
 
-        <p className="pizzaName">Ege Pizza</p>
+        <p className="pizzaName bold ">Ege Pizza</p>
         <div className="pizzaSelection">
           <div className="pizzaBoyut">
             <span className="pizzaDetails">Boyut: </span>
             {exChoosen["size"]}
           </div>
-          <div className="pizzaBoyut">
+          <div className="pizzaBoyut bold ">
             <span className="pizzaDetails">Hamur:</span>
             {exChoosen["kalinlik"]}
           </div>
           <div className="pizzaBoyut">
             <span className="pizzaDetails">Ek Malzemeler: </span>
             {addedItems.join(", ")}
+          </div>
+        </div>
+        <div className="pizzaTotal">
+          <div className="siparisToplami">Sipariş Toplamı</div>
+          <div className="secimlerFlex">
+            <div>Seçimler</div>
+            <div>{exChoosen.secimUcreti}₺</div>
+          </div>
+          <div className="secimlerFlex">
+            <div>Toplam</div>
+            <div>{exChoosen.toplamUcret}₺</div>
           </div>
         </div>
       </div>
