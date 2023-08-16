@@ -1,7 +1,8 @@
 .mainContainer1 {
   background-image: url("mvp-banner.png");
-  height: 100vh;
-  background-position: bottom;
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
   margin-top: 0;
   padding-top: 0;
   display: flex;
@@ -27,4 +28,69 @@
   border: 1px solid #fdc913;
   border-radius: 1rem;
   padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+.navMenu {
+  padding: 10px 0 10px 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 35px 0 0;
+}
+
+nav ul li a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-size: 22px;
+}
+
+#icon {
+  margin: 0 10px -10px 0;
+}
+.firstimg {
+  background-image: url("../Assets/adv-aseets/kart-1.png");
+  width: 40%;
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.secondimg {
+  background-image: url("../Assets/adv-aseets/kart-2.png");
+  width: 50%;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.thirdimg {
+  background-image: url("../Assets/adv-aseets/kart-3.png");
+  width: 50%;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.secondandthirdimg {
+  width: 40%;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.images {
+  display: flex;
+  width: 70%;
+  margin: 3rem auto;
+  align-items: center;
+  justify-content: center;
 }
