@@ -3,9 +3,9 @@ import { Switch, Route } from "react-router-dom";
 import Order from "./Pages/Order";
 import Home from "./Pages/Home";
 import Success from "./Pages/Success";
-const exChoosen = [];
+import { useState } from "react";
 const App = () => {
-  exChoosen.map((exchoose) => exchoose);
+  const [exChoosen, setExChoosen] = useState([]);
   return (
     <div>
       <Switch>
@@ -13,10 +13,10 @@ const App = () => {
           <Home />
         </Route>
         <Route path="/pizza" exact>
-          <Order exChoosen={exChoosen} />
+          <Order setExChoosen={setExChoosen} />
         </Route>
         <Route path="/success" exact>
-          <Success exchoose={exChoosen.map((exchoose) => exchoose)} />
+          <Success exChoosen={exChoosen} />
         </Route>
       </Switch>
     </div>

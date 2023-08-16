@@ -6,7 +6,7 @@ import Hesap from "../components/Hesap";
 import Name from "../components/Name";
 import "./order.css";
 import Header1 from "../layouts/Header1";
-const Order = ({ exChoosen }) => {
+const Order = ({ setExChoosen }) => {
   const [musteriIsmi, setMusteriIsmi] = useState("");
   const [orderNote, setOrderNote] = useState("");
   const [boyut, setBoyut] = useState("");
@@ -30,7 +30,7 @@ const Order = ({ exChoosen }) => {
   const foodList = {
     foodName: "Ege Pizza",
     foodPrice: 150,
-    foodimg: "C:\fsweb-s7-challenge-pizzaAssetsadv-aseets\food-1.png",
+    foodimg: "\food-1.png",
     description:
       "Egenin taze toplanmış organik ürünleriyle İtalya'nın dillere destan olmuş bu lezzetini birleştirdik. Hala denemediysen çok şey kaçırıyorsun. Üstenlik developer'ımız sizler için üşenmedi ve öyle bir checklist oluşturduki istediğin ürünleri anında ekleyip çıkarabileceksin ve  tüm bunları yaparken Single Page Application Kullandığı için fiyat hesaplamaları da kuryemiz kadar hızlı olacak ve anında ekranını görebileceksin. Evet bizce de bir  bahşişi hakkediyor.",
     Siparisnotu: orderNote,
@@ -59,10 +59,11 @@ const Order = ({ exChoosen }) => {
     kabak: boolean14,
   };
 
-  exChoosen = Object.keys(orderObject).filter(
-    (key) => orderObject[key] === true
-  );
-  console.log(exChoosen);
+  const choose = () => {
+    setExChoosen(
+      Object.keys(orderObject).filter((key) => orderObject[key] === true)
+    );
+  };
 
   const [ekstra, setEkstra] = useState(0);
   function ekstraHesapla(ekstraAdedi) {
