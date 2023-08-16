@@ -10,7 +10,7 @@ const Name = ({ setMusteriIsmi, setButtonDisabled }) => {
       .required(
         "İsmini bağışlamak bu kadar zor olmamalı. Sana söz kimseye söylemeyeceğiz"
       )
-      .min(3, "3 karakterden aşağı olmaz kurtarsa dükkan senin"),
+      .min(2, "İsim en az 2 karakter olmalıdır"),
   });
 
   const handleIsim = async (event) => {
@@ -39,6 +39,7 @@ const Name = ({ setMusteriIsmi, setButtonDisabled }) => {
           </label>
         </div>
         <input
+          data-cy="isiminput"
           name="name"
           className="notForm"
           type="text"

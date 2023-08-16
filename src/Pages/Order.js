@@ -6,7 +6,7 @@ import Hesap from "../components/Hesap";
 import Name from "../components/Name";
 import "./order.css";
 import Header1 from "../layouts/Header1";
-const Order = (props) => {
+const Order = ({ exChoosen }) => {
   const [musteriIsmi, setMusteriIsmi] = useState("");
   const [orderNote, setOrderNote] = useState("");
   const [boyut, setBoyut] = useState("");
@@ -58,6 +58,11 @@ const Order = (props) => {
     ananas: boolean13,
     kabak: boolean14,
   };
+
+  exChoosen = Object.keys(orderObject).filter(
+    (key) => orderObject[key] === true
+  );
+  console.log(exChoosen);
 
   const [ekstra, setEkstra] = useState(0);
   function ekstraHesapla(ekstraAdedi) {

@@ -29,10 +29,11 @@ const EkMalzemeler = (props) => {
               type="checkbox"
               value="pepperoni"
             ></input>
-            <label htmlFor="pepperoni"> Pepperoni</label>
+            <label htmlFor="pepperoni">Pepperoni</label>
           </div>
           <div>
             <input
+              data-cy="sosis"
               onClick={() => props.setBoolean2(!props.boolean2)}
               name="sosis"
               id="sosis"
@@ -46,7 +47,7 @@ const EkMalzemeler = (props) => {
             <input
               onClick={() => props.setBoolean3(!props.boolean3)}
               onChange={exHandle}
-              name="kanada-jambonu"
+              name="kanadaJambonu"
               id="kanada-jambonu"
               type="checkbox"
               value="kanada-jambonu"
@@ -57,7 +58,7 @@ const EkMalzemeler = (props) => {
             <input
               onClick={() => props.setBoolean4(!props.boolean4)}
               onChange={exHandle}
-              name="tavuk-izgara"
+              name="tavukIzgara"
               id="tavuk-izgara"
               type="checkbox"
               value="tavuk-izgara"
@@ -66,6 +67,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              data-cy="sogan"
               onClick={() => props.setBoolean5(!props.boolean5)}
               name="sogan"
               onChange={exHandle}
@@ -77,6 +79,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              data-cy="domates"
               onClick={() => props.setBoolean6(!props.boolean6)}
               onChange={exHandle}
               name="domates"

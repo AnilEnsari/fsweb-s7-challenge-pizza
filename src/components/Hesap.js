@@ -21,7 +21,7 @@ const Hesap = (props) => {
   orderObject.adet = piece;
   orderObject.secimUcreti = ekstra * piece;
   orderObject.toplamUcret = toplamucret;
-  const buttonHandler = (e) => {
+  const buttonHandler = () => {
     axios
       .post("https://reqres.in/api/users", orderObject)
       .then((response) => {
@@ -57,6 +57,7 @@ const Hesap = (props) => {
         <div>
           <Link to="success">
             <button
+              data-cy="isdisabled"
               disabled={buttonDisabled}
               onClick={buttonHandler}
               id="order-button"

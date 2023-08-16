@@ -15,7 +15,7 @@ const ZorunluFormlar = ({ setBoyut, setHamurKalinlik }) => {
   };
   return (
     <div className="zorunluFormMain ">
-      <form id="order-pizza">
+      <form id="pizza-form">
         <div className="flexyap">
           <span className="size">
             <h3 className="inline">
