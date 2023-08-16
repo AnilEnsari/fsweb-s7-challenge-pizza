@@ -30,7 +30,7 @@ const Order = ({ setExChoosen }) => {
   const foodList = {
     foodName: "Ege Pizza",
     foodPrice: 150,
-    foodimg: "\food-1.png",
+    foodimg: "/Assets/adv-aseets/food-1.png",
     description:
       "Egenin taze toplanmış organik ürünleriyle İtalya'nın dillere destan olmuş bu lezzetini birleştirdik. Hala denemediysen çok şey kaçırıyorsun. Üstenlik developer'ımız sizler için üşenmedi ve öyle bir checklist oluşturduki istediğin ürünleri anında ekleyip çıkarabileceksin ve  tüm bunları yaparken Single Page Application Kullandığı için fiyat hesaplamaları da kuryemiz kadar hızlı olacak ve anında ekranını görebileceksin. Evet bizce de bir  bahşişi hakkediyor.",
     Siparisnotu: orderNote,
@@ -58,12 +58,7 @@ const Order = ({ setExChoosen }) => {
     ananas: boolean13,
     kabak: boolean14,
   };
-
-  const choose = () => {
-    setExChoosen(
-      Object.keys(orderObject).filter((key) => orderObject[key] === true)
-    );
-  };
+  // Object.keys(orderObject).filter((key) => orderObject[key] === true)
 
   const [ekstra, setEkstra] = useState(0);
   function ekstraHesapla(ekstraAdedi) {
@@ -127,6 +122,7 @@ const Order = ({ setExChoosen }) => {
         <Siparisnotu setOrderNote={setOrderNote} />
         <hr></hr>
         <Hesap
+          setExChoosen={setExChoosen}
           foodList={foodList}
           orderObject={orderObject}
           ekstra={ekstra}

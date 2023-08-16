@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import Success from "./Pages/Success";
 import { useState } from "react";
 const App = () => {
-  const [exChoosen, setExChoosen] = useState([]);
+  const [exChoosen, setExChoosen] = useState("");
   return (
     <div>
       <Switch>

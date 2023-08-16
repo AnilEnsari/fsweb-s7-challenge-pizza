@@ -2,7 +2,7 @@
   background-color: #ce2829;
   width: 100%;
   height: 100vh;
-  margin-top: 0;
+  margin: 0 auto;
 }
 .basliklar {
   width: 50%;
@@ -27,4 +27,23 @@
   align-items: center;
   height: 50%;
   flex-direction: column;
+}
+.pagewidth {
+  max-width: 50%;
+  margin: 0 auto;
+}
+.lezzetyolda {
+  color: #fdc913;
+}
+.pizzaName {
+  color: #faf7f2;
+  text-align: center;
+}
+.pizzaSelection {
+  color: #faf7f2;
+  width: 40%;
+  margin: 0 auto;
+}
+.pizzaDetails {
+  font-weight: lighter;
 }
