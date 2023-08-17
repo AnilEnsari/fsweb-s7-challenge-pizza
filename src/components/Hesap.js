@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Hesap = (props) => {
   const { foodList, ekstra, orderObject, buttonDisabled, setExChoosen } = props;
+
   const [piece, setPiece] = useState(1);
+  const history = useHistory();
   const arttir = () => {
     setPiece(piece + 1);
   };
@@ -27,6 +29,7 @@ const Hesap = (props) => {
       .post("https://reqres.in/api/users", orderObject)
       .then((response) => {
         console.log(response.data);
+        history.push("/success");
       })
       .catch((error) =>
         console.error("internet Bağlantınızı kontrol edin", error)
@@ -56,17 +59,15 @@ const Hesap = (props) => {
           </div>
         </div>
         <div>
-          <Link to="/success">
-            <button
-              data-cy="isdisabled"
-              disabled={buttonDisabled}
-              onClick={buttonHandler}
-              id="order-button"
-              className="orderButton"
-            >
-              SİPARİŞ VER
-            </button>
-          </Link>
+          <button
+            data-cy="isdisabled"
+            disabled={buttonDisabled}
+            onClick={buttonHandler}
+            id="order-button"
+            className="orderButton"
+          >
+            SİPARİŞ VER
+          </button>
         </div>
       </div>
     </div>
