@@ -42,6 +42,7 @@ const EkMalzemeler = (props) => {
                 onClick={() =>
                   props[`setBoolean${index + 1}`](!props[`boolean${index + 1}`])
                 }
+                data-cy={items}
                 onChange={exHandle}
                 disabled={exPiece >= 10}
                 name={items}
