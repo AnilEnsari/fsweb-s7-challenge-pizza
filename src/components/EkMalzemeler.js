@@ -4,6 +4,22 @@ import { useState, useEffect } from "react";
 const EkMalzemeler = (props) => {
   const { ekstraHesapla } = props;
   const [exPiece, setExPiece] = useState(0);
+  const optionalItems = [
+    "pepperoni",
+    "sosis",
+    "kanadaJambonu",
+    "tavukIzgara",
+    "sogan",
+    "domates",
+    "misir",
+    "sucuk",
+    "jalepeno",
+    "sarimsak",
+    "biber",
+    "salam",
+    "ananas",
+    "kabak",
+  ];
   const exHandle = (event) => {
     if (event.target.checked === true) {
       setExPiece(exPiece + 1);
@@ -20,7 +36,23 @@ const EkMalzemeler = (props) => {
         <h3>Ek Malzemeler</h3>
         <p>En Fazla 10 malzeme seçebilirsiniz 5₺</p>
         <div className="ekstramlz">
-          <div>
+          {optionalItems.map((items, index) => (
+            <div key={index}>
+              <input
+                onClick={() =>
+                  props[`setBoolean${index + 1}`](!props[`boolean${index + 1}`])
+                }
+                onChange={exHandle}
+                disabled={exPiece >= 10}
+                name={items}
+                id={items}
+                type={"checkbox"}
+                value={items}
+              ></input>
+              <label htmlFor={items}>{items}</label>
+            </div>
+          ))}
+          {/* <div>
             <input
               onClick={() => props.setBoolean1(!props.boolean1)}
               onChange={exHandle}
@@ -190,7 +222,7 @@ const EkMalzemeler = (props) => {
               value="kabak"
             ></input>
             <label htmlFor="kabak"> Kabak</label>
-          </div>
+          </div> */}
         </div>
       </form>
     </div>
