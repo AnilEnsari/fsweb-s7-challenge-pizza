@@ -4,7 +4,8 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 
 const Hesap = (props) => {
-  const { foodList, ekstra, orderObject, buttonDisabled, setExChoosen } = props;
+  const { foodList, ekstra, orderObject, buttonDisabled, setExChoosen, boyut } =
+    props;
 
   const [piece, setPiece] = useState(1);
   const history = useHistory();
@@ -18,8 +19,13 @@ const Hesap = (props) => {
     foodList ? foodList.foodPrice : 0
   );
   useEffect(() => {
-    setToplamucret((ekstra + foodList.foodPrice) * piece);
-  }, [piece, ekstra]);
+    setToplamucret(
+      (ekstra + foodList.foodPrice) *
+        piece *
+        (boyut === "kucuk" ? 0.8 : 1) *
+        (boyut === "buyuk" ? 1.2 : 1)
+    );
+  }, [piece, ekstra, boyut]);
   orderObject.adet = piece;
   orderObject.secimUcreti = ekstra * piece;
   orderObject.toplamUcret = toplamucret;

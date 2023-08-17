@@ -60,7 +60,6 @@ const Order = ({ setExChoosen }) => {
     ananas: boolean13,
     kabak: boolean14,
   };
-  // Object.keys(orderObject).filter((key) => orderObject[key] === true)
 
   const [ekstra, setEkstra] = useState(0);
   function ekstraHesapla(ekstraAdedi) {
@@ -124,6 +123,7 @@ const Order = ({ setExChoosen }) => {
         <Siparisnotu setOrderNote={setOrderNote} />
         <hr></hr>
         <Hesap
+          boyut={boyut}
           setExChoosen={setExChoosen}
           foodList={foodList}
           orderObject={orderObject}
