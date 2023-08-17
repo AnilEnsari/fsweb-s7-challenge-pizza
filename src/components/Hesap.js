@@ -20,10 +20,11 @@ const Hesap = (props) => {
   );
   useEffect(() => {
     setToplamucret(
-      (ekstra + foodList.foodPrice) *
-        piece *
-        (boyut === "kucuk" ? 0.8 : 1) *
-        (boyut === "buyuk" ? 1.2 : 1)
+      (ekstra +
+        foodList.foodPrice *
+          (boyut === "kucuk" ? 0.8 : 1) *
+          (boyut === "buyuk" ? 1.2 : 1)) *
+        piece
     );
   }, [piece, ekstra, boyut]);
   orderObject.adet = piece;
