@@ -138,4 +138,5 @@ header h1 {
   width: 50%;
   height: 12rem;
   background-position: bottom;
+  background-repeat: no-repeat;
 }
