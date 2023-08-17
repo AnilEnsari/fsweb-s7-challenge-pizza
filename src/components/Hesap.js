@@ -31,11 +31,11 @@ const Hesap = (props) => {
   orderObject.secimUcreti = ekstra * piece;
   orderObject.toplamUcret = toplamucret;
   const buttonHandler = (e) => {
-    setExChoosen(orderObject);
     axios
       .post("https://reqres.in/api/users", orderObject)
       .then((response) => {
         console.log(response.data);
+        setExChoosen(response.data);
         history.push("/success");
       })
       .catch((error) =>
