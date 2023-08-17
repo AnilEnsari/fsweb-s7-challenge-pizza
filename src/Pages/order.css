@@ -132,3 +132,10 @@ header h1 {
 .red {
   color: #ce2829;
 }
+.bannerimg {
+  margin: 0 auto;
+  background-image: url("./adv-form-banner.png");
+  width: 50%;
+  height: 12rem;
+  background-position: bottom;
+}

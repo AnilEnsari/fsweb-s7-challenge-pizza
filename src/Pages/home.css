@@ -61,31 +61,34 @@ nav ul li a {
 }
 .firstimg {
   background-image: url("../Assets/adv-aseets/kart-1.png");
-  width: 40%;
-  height: 40vh;
+  width: 33%;
+  height: 42vh;
   background-repeat: no-repeat;
   background-size: contain;
 }
 .secondimg {
   background-image: url("../Assets/adv-aseets/kart-2.png");
-  width: 50%;
-  height: 70vh;
+  width: 100%;
+  height: 35vh;
   background-repeat: no-repeat;
   background-size: contain;
 }
 .thirdimg {
   background-image: url("../Assets/adv-aseets/kart-3.png");
-  width: 50%;
-  height: 50vh;
+  width: 100%;
+  height: 35vh;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .secondandthirdimg {
-  width: 40%;
-  height: 50vh;
+  width: 65%;
+  height: 40vh;
   background-repeat: no-repeat;
   background-size: contain;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 .images {
   display: flex;

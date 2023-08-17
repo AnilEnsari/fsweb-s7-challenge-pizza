@@ -6,6 +6,8 @@ import Hesap from "../components/Hesap";
 import Name from "../components/Name";
 import "./order.css";
 import Header1 from "../layouts/Header1";
+import Footer from "../layouts/Footer";
+
 const Order = ({ setExChoosen }) => {
   const [musteriIsmi, setMusteriIsmi] = useState("");
   const [orderNote, setOrderNote] = useState("");
@@ -129,6 +131,7 @@ const Order = ({ setExChoosen }) => {
           buttonDisabled={buttonDisabled}
         />
       </div>
+      <Footer />
     </div>
   );
 };

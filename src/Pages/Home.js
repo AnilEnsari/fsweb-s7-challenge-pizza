@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./home.css";
 import Icon1 from "../icons/1.svg";
 import Icon2 from "../icons/2.svg";
@@ -7,6 +7,7 @@ import Icon3 from "../icons/3.svg";
 import Icon4 from "../icons/4.svg";
 import Icon5 from "../icons/5.svg";
 import Icon6 from "../icons/6.svg";
+import Footer from "../layouts/Footer";
 
 const Home = () => {
   return (
@@ -26,40 +27,40 @@ const Home = () => {
         <nav className="navMenu">
           <ul>
             <li>
-              <NavLink to="/">
+              <Link to="/">
                 <img id="icon" src={Icon1} alt="ıcon" />
                 YENİ! Kore
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/">
+              <Link to="/">
                 <img id="icon" src={Icon2} alt="ıcon" />
                 Pizza
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/">
+              <Link to="/">
                 <img id="icon" src={Icon3} alt="ıcon" />
                 Burger
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/">
+              <Link to="/">
                 <img id="icon" src={Icon4} alt="ıcon" />
                 Kızartmalar
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/">
+              <Link to="/">
                 <img id="icon" src={Icon5} alt="ıcon" />
                 Fast Food
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/">
+              <Link to="/">
                 <img id="icon" src={Icon6} alt="ıcon" />
                 Gazlı İçecekler
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -71,6 +72,7 @@ const Home = () => {
           <div className="thirdimg"></div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

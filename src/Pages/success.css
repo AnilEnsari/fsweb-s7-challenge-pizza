@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Quattrocento&family=Satisfy&display=swap");
+
 .main-container {
   background-color: #ce2829;
   width: 100%;
@@ -34,6 +36,7 @@
 }
 .lezzetyolda {
   color: #fdc913;
+  font-family: "Satisfy";
 }
 .pizzaName {
   color: #faf7f2;
