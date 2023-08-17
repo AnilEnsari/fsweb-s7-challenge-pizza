@@ -58,6 +58,7 @@ const ZorunluFormlar = ({ setBoyut, setHamurKalinlik }) => {
             </h3>
             <label htmlFor="hamursec">
               <select
+                data-cy="ince"
                 onClick={handleKalinlik}
                 name="size-dropdown"
                 id="size-dropdown"

@@ -28,11 +28,18 @@ describe("Pizzatesti", () => {
     cy.get(".buttonPiece").contains("2");
     cy.get(".flexHandlerToplam > :nth-child(2)").contains("300");
   });
-  it("isim dogru olunca buton enable oluyor mu", () => {
-    cy.get("[data-cy=isiminput]").type("anil");
+  it("bastan sona gonderiyor mu", () => {
+    cy.get("[data-cy=isiminput]").type("Anıl");
     cy.get('[data-cy="sogan"]').check().should("be.checked");
     cy.get('input[data-cy="sogan"]').click().should("not.be.checked");
     cy.get("[data-cy=isdisabled]").should("be.enabled");
+    cy.get("#orta").check();
+    cy.get('[data-cy="ince"]').select("ince");
+    cy.get('input[data-cy="sogan"]').click();
+    cy.get("input[data-cy=domates]").click();
+    cy.get("input[data-cy=sosis]").click();
+    cy.get("#special-text > .notForm").type("ketçap ve mayonez lütfen");
+    cy.get(".artieksi > :nth-child(3)").click();
     cy.get("[data-cy=isdisabled]").click();
   });
 });
