@@ -22,6 +22,12 @@ describe("Pizzatesti", () => {
     //   cy.get("[data-cy=domates]").should("be.enabled");
     //   cy.get("[data-cy=sosis]");
   });
+
+  it("Sayac ve hesaplama calisiyor mu ?", () => {
+    cy.get(".artieksi > :nth-child(3)").click();
+    cy.get(".buttonPiece").contains("2");
+    cy.get(".flexHandlerToplam > :nth-child(2)").contains("300");
+  });
   it("isim dogru olunca buton enable oluyor mu", () => {
     cy.get("[data-cy=isiminput]").type("anil");
     cy.get('[data-cy="sogan"]').check().should("be.checked");
