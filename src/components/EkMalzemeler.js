@@ -24,6 +24,7 @@ const EkMalzemeler = (props) => {
             <input
               onClick={() => props.setBoolean1(!props.boolean1)}
               onChange={exHandle}
+              disabled={exPiece >= 10}
               name="pepperoni"
               id="pepperoni"
               type="checkbox"
@@ -34,6 +35,7 @@ const EkMalzemeler = (props) => {
           <div>
             <input
               data-cy="sosis"
+              disabled={exPiece >= 10}
               onClick={() => props.setBoolean2(!props.boolean2)}
               name="sosis"
               id="sosis"
@@ -47,6 +49,7 @@ const EkMalzemeler = (props) => {
             <input
               onClick={() => props.setBoolean3(!props.boolean3)}
               onChange={exHandle}
+              disabled={exPiece >= 10}
               name="kanadaJambonu"
               id="kanada-jambonu"
               type="checkbox"
@@ -58,6 +61,7 @@ const EkMalzemeler = (props) => {
             <input
               onClick={() => props.setBoolean4(!props.boolean4)}
               onChange={exHandle}
+              disabled={exPiece >= 10}
               name="tavukIzgara"
               id="tavuk-izgara"
               type="checkbox"
@@ -71,6 +75,7 @@ const EkMalzemeler = (props) => {
               onClick={() => props.setBoolean5(!props.boolean5)}
               name="sogan"
               onChange={exHandle}
+              disabled={exPiece >= 10}
               id="sogan"
               type="checkbox"
               value="sogan"
@@ -79,6 +84,7 @@ const EkMalzemeler = (props) => {
           </div>
           <div>
             <input
+              disabled={exPiece >= 10}
               data-cy="domates"
               onClick={() => props.setBoolean6(!props.boolean6)}
               onChange={exHandle}
@@ -93,6 +99,7 @@ const EkMalzemeler = (props) => {
             <input
               onClick={() => props.setBoolean7(!props.boolean7)}
               onChange={exHandle}
+              disabled={exPiece >= 10}
               name="misir"
               id="misir"
               type="checkbox"
@@ -105,6 +112,7 @@ const EkMalzemeler = (props) => {
               onClick={() => props.setBoolean8(!props.boolean8)}
               onChange={exHandle}
               name="sucuk"
+              disabled={exPiece >= 10}
               id="sucuk"
               type="checkbox"
               value="sucuk"
@@ -117,6 +125,7 @@ const EkMalzemeler = (props) => {
               onChange={exHandle}
               name="jalepeno"
               id="jalepeno"
+              disabled={exPiece >= 10}
               type="checkbox"
               value="jalepeno"
             ></input>
@@ -126,6 +135,7 @@ const EkMalzemeler = (props) => {
             <input
               onClick={() => props.setBoolean10(!props.boolean10)}
               onChange={exHandle}
+              disabled={exPiece >= 10}
               name="sarimsak"
               id="sarimsak"
               type="checkbox"
@@ -138,6 +148,7 @@ const EkMalzemeler = (props) => {
               onClick={() => props.setBoolean11(!props.boolean11)}
               name="biber"
               onChange={exHandle}
+              disabled={exPiece >= 10}
               id="biber"
               type="checkbox"
               value="biber"
@@ -149,6 +160,7 @@ const EkMalzemeler = (props) => {
               onClick={() => props.setBoolean12(!props.boolean12)}
               name="salam"
               onChange={exHandle}
+              disabled={exPiece >= 10}
               id="salam"
               type="checkbox"
               value="salam"
@@ -159,6 +171,7 @@ const EkMalzemeler = (props) => {
             <input
               onClick={() => props.setBoolean13(!props.boolean13)}
               onChange={exHandle}
+              disabled={exPiece >= 10}
               name="ananas"
               id="ananas"
               type="checkbox"
@@ -170,6 +183,7 @@ const EkMalzemeler = (props) => {
             <input
               onClick={() => props.setBoolean14(!props.boolean14)}
               onChange={exHandle}
+              disabled={exPiece >= 10}
               name="kabak"
               id="kabak"
               type="checkbox"
